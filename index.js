@@ -1,9 +1,13 @@
 window.onload = function(){
 
 var url = "https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPjJklnYpPQIUq";
-var date = "2021-09-10";
+var date = "";
 var btn = document.getElementById("btn");
 var inputBtn = document.getElementById("inputBtn");
+var todaysDate = new Date();
+let text = todaysDate.toISOString().slice(0, 10);
+
+document.getElementById("inputDate").value = text;
 api(url);
 inputBtn.addEventListener("click", function(){
     btn.innerHTML = "Like";
