@@ -1,0 +1,15 @@
+#image
+{
+    max-width: 100%;
+    height:auto;
+    justify-content: center;
+}
+#title
+{
+    font: bold;
+}
+
+.header
+{
+    margin-bottom: 50px;
+}

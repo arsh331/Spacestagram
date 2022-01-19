@@ -1,4 +1,4 @@
-fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-03-03")
+fetch("https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPjJklnYpPQIUq&date=2021-03-03")
 .then(
     function(response){
         if(response.status != 200){
@@ -7,7 +7,8 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-03-03")
         }
 
         response.json().then(function(data){
-            document.getElementById("image").setAttribute("src",data.url);
+            editData(data);
+            console.log(data);
         });
     }
 )
@@ -15,4 +16,20 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-03-03")
 {
     console.log("Fetch error", err);
 });
+
+function editData(data)
+{
+    var btn = document.getElementById("btn");
+
+    document.getElementById("image").setAttribute("src",data.url);
+    document.getElementById("title").innerHTML = data.title + " - " + data.date;
+    document.getElementById("description").innerHTML = data.explanation;
+    
+    btn.addEventListener("click", function(){
+        if(btn.textContent == "Like")
+        btn.innerHTML = "Unlike";
+        else if(btn.textContent == "Unlike")
+        btn.innerHTML = "Like";
+    });
+}
 
