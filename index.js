@@ -1,4 +1,21 @@
-fetch("https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPjJklnYpPQIUq&date=2021-03-03")
+window.onload = function(){
+
+var url = "https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPjJklnYpPQIUq";
+var date = "2021-09-10";
+var btn = document.getElementById("btn");
+var inputBtn = document.getElementById("inputBtn");
+api(url);
+inputBtn.addEventListener("click", function(){
+    btn.innerHTML = "Like";
+    date = document.getElementById("inputDate").value;
+    url = url + "&date=" + date;
+    api(url);
+    url = "https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPjJklnYpPQIUq";
+    
+});
+function api(url)
+{
+fetch(url)
 .then(
     function(response){
         if(response.status != 200){
@@ -16,10 +33,10 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=ou0LJEahLWPl1YE5luSNLtf4PEHPj
 {
     console.log("Fetch error", err);
 });
-
+}
 function editData(data)
 {
-    var btn = document.getElementById("btn");
+    
 
     document.getElementById("image").setAttribute("src",data.url);
     document.getElementById("title").innerHTML = data.title + " - " + data.date;
@@ -32,4 +49,4 @@ function editData(data)
         btn.innerHTML = "Like";
     });
 }
-
+}
