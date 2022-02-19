@@ -1,24 +1,86 @@
-#image
-{
-    max-width: 100%;
-    height:auto;
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Serif:wght@200&display=swap');
+html{
 }
-#title
-{
-    font: bold;
+body{
+    margin:0;
+    display: flex;
+    flex-flow:column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #343434;
+}
+.mainContent{
+    font-family: 'Roboto Serif',sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #343434;
+    color: #c9c8c8;
+    height: 70vh;
 }
 
-.header
-{
-    margin-bottom: 50px;
+.mainContent h2{
+    color: #c5b97a;
 }
 
-.input
-{
-    margin-bottom: 50px;
+#image{
+    width: 40vw;
+    height: 55vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
-.mainContent
-{
-    margin-bottom: 100px;
+
+#info{
+    width:40vw;
+    height: 55vh;
 }
+
+.header{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #262626;
+    color: white;
+    padding-bottom: 10px;
+    height: 30vh;
+}
+
+.header h1{
+    color: #c5b97a;
+}
+.header p{
+    margin:0;
+}
+.header h4{
+    text-decoration: none;
+}
+.input{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.date{
+    width: 100%;
+    text-align: center;
+}
+#inputBtn{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 7px;
+    padding: 5px 15px;
+    background-color: black;
+    border: black;
+    color: white;
+}
+#inputBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+#inputDate{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 7px;
+}
+

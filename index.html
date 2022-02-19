@@ -10,19 +10,20 @@
 </head>
 <body>
     <div class="header">
-    <h1>Spacestagram</h1>
-    <p>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</p>
-    </div>
-    <div class="input">
+        <h1>Spacestagram</h1>
+        <p>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</p>
         <h4>To see picture from a particular date please enter below:</h4>
-        <input type="date" id="inputDate">
-        <button id="inputBtn">Go</button>
+            <div class="date">
+            <input type="date" id="inputDate">
+            <button id="inputBtn">Go</button>
+            </div>
     </div>
     <div class="mainContent">
         <img src="" alt="" id="image">
-        <h3 id="title"></h3>
+        <div id="info">
+        <h2 id="title"></h2>
         <p id="description"></p>
-        <button id="btn">Like</button>
+        </div>
     </div>
 </body>
 </html>
